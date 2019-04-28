@@ -1,28 +1,29 @@
+/*
 #include <iostream>
 #include <stdlib.h>
-
-using namespace std ;
-
-class Guesser
-{
-    public :
+#include <string>
+#include "Guesser.hpp"
+using namespace std;
 
 
+  bullpgia::Guesser::Guesser()
+  {
+     
+  }
+  bullpgia::Guesser::Guesser(string password)
+  {
 
+  }
 
-        int get_pgia_amount()
-        {
-            return num_of_pgia ;
-        }
-
-        int get_bulls_amount()
-        {
-            return num_of_bulls ;
-        }
-
-    private:
-        int num_of_bulls ;
-        int num_of_pgia ;
-};
-
-
+   string bullpgia::Guesser::guess()
+    {
+        return "";
+    }
+    void bullpgia::Guesser::startNewGame(uint length)
+    {
+      cout<<"under construction"<<endl;  
+    }
+    void bullpgia::Guesser::learn(std:string Chars)
+    {
+      cout<<"under construction"<<endl; 
+    }*/

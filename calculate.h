@@ -1,18 +1,13 @@
-//
-// Created by אביהו on 24/04/2019.
-//
+#pragma once
+#include <iostream>
+#include <string>
 
-#ifndef TASK4_CALCULATE_H
-#define TASK4_CALCULATE_H
-
-
-class calculate
+#define ZERO_TO_NINE 10
+namespace bullpgia
 {
 
-    void calculateBullAndPgia();
+    const std::string calculateBullAndPgia(const std::string choice, const std::string guess);
+    bool isExist(bool digits[ZERO_TO_NINE] , int num) ;
+}
+int main() ;
 
-
-};
-
-
-#endif //TASK4_CALCULATE_H

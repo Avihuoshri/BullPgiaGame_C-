@@ -1,6 +1,7 @@
 #include <iostream>
-#include "calculate.hpp"
+#include "calculate.h"
 #include <string>
+#include <cmath>
 #define ZERO_TO_NINE 10
 
 
@@ -8,30 +9,6 @@ using namespace std;
 
 namespace bullpgia
 {
-//void calculateBullAndPgia()
-
-    //Chooser chooser;
-    //Guesser guesser;
-    //int BullCount=0;
-    //int PgiaCount=0;
-    //if(guesser->size == sizeof(chooser->key_chooser)/sizeof(*(chooser->key_chooser)))
-    //{
-    //    for(int i=0;i<guesser->size;i++)
-        //{
-            //if(isExist[guesser->key_Guesser[i]] == true) // PGIA
-            //{
-                //if(chooser->key_chooser[i] == guesser->key_Guesser[i])
-                //BullCount++;
-              //  else
-            //    {
-          //      PgiaCount++;
-        //        }
-      //      }
-            
-    //    }
-  //  }
-//}
-
 
 bool isExist(bool digits[ZERO_TO_NINE] , int num )
 {
@@ -41,38 +18,49 @@ bool isExist(bool digits[ZERO_TO_NINE] , int num )
     return false ;
 }
 
+int numOfChars(string str , char ch)
+{
+    int counter = 0 ;
+    for (int i = 0; i < str.length() ; ++i)
+    {
+        if(str[i] == ch)
+            counter++ ;
+    }
+    return counter ;
+}
+
 
 const string calculateBullAndPgia(const std::string choice, const std::string guess)
 {
   int bull = 0 ;
   int pgia = 0 ;
-  bool digits[ZERO_TO_NINE] ; 
+  bool digits[ZERO_TO_NINE] ;
   for(int i = 0 ; i < choice.length() ; i++)
   {
     digits[(int) choice[i]] = true ;
   }
 
 
-  for(int i = 0 ; i < guess.length() ; i++)
+  for(int i = 0 ; i < choice.length() ; i++)
   {
-    if(guess.at(i) == choice[i])
+    if(choice[i]== guess[i])
     {
-      bull++ ; 
+      bull++ ;
     }
     else
     {
-      if(isExist(digits , guess[i]))
-        pgia++ ; 
-
+        pgia += min(numOfChars(choice , choice[i]) , numOfChars(guess , choice[i])) ;
     }
   }
+
+
   const string result = "Bull : "+to_string(bull)+ "       Pgia : " +to_string(pgia)   ;
   cout<<result<<endl ;
-  return result ; 
+  return result ;
 }
 }
-/*int main()
+int main()
 {
-  bullpgia::calculateBullAndPgia("1234","1134") ; 
+  bullpgia::calculateBullAndPgia("1224","2005") ;
   return 0 ;
-}*/
+}

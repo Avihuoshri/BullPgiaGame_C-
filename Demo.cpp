@@ -13,11 +13,6 @@ using namespace std;
 #include "DummyChoosers.hpp"
 #include "DummyGuessers.hpp"
 #include "SmartGuesser.hpp"
-#include "Guesser.hpp"
-#include "Chooser.hpp"
-#include "calculate.hpp"
-
-
 using namespace bullpgia;
 
 int main() {

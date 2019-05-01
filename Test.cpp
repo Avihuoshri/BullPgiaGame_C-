@@ -53,7 +53,6 @@ int main() {
 		.CHECK_EQUAL(play(c1234, g12345, 4, 100), 101)   
 		.CHECK_EQUAL(play(c12345, g1234, 4, 100), 0) 
 
-
 		.CHECK_OUTPUT(calculateBullAndPgia("1282","1233"), "2,0")      
 		.CHECK_OUTPUT(calculateBullAndPgia("2323","2323"), "4,0")
 		.CHECK_OUTPUT(calculateBullAndPgia("2323","1823"), "2,2")

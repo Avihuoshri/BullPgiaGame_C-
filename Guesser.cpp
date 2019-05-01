@@ -1,4 +1,3 @@
-/*
 #include <iostream>
 #include <stdlib.h>
 #include <string>
@@ -6,24 +5,15 @@
 using namespace std;
 
 
-  bullpgia::Guesser::Guesser()
-  {
-     
-  }
-  bullpgia::Guesser::Guesser(string password)
-  {
-
-  }
-
-   string bullpgia::Guesser::guess()
+    bullpgia::Guesser::string guess()
     {
         return "";
     }
-    void bullpgia::Guesser::startNewGame(uint length)
+    bullpgia::Guesser::void startNewGame(uint length)
     {
       cout<<"under construction"<<endl;  
     }
-    void bullpgia::Guesser::learn(std:string Chars)
+    bullpgia::Guesser::void learn(std:string Chars)
     {
       cout<<"under construction"<<endl; 
-    }*/
+    }

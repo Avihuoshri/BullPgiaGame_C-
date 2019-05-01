@@ -1,5 +1,5 @@
 #include <iostream>
-#include "calculate.h"
+#include "calculate.hpp"
 #include <string>
 #include <cmath>
 #define ZERO_TO_NINE 10

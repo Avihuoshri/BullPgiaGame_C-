@@ -59,8 +59,8 @@ const string calculateBullAndPgia(const std::string choice, const std::string gu
   return result ;
 }
 }
-int main()
-{
-  bullpgia::calculateBullAndPgia("1224","2005") ;
-  return 0 ;
-}
+//int main()
+//{
+//  bullpgia::calculateBullAndPgia("1224","2005") ;
+//  return 0 ;
+//}
